@@ -47,4 +47,8 @@ class Beverage2(private val beverageData2: BeverageData2) {
 
         return stringBuilder.toString()
     }
+
+    fun get2(){}
+
+    fun get3(){}
 }

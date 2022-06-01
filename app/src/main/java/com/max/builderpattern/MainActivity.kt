@@ -2,6 +2,7 @@ package com.max.builderpattern
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import com.max.builderpattern.part1.Cashier
 import com.max.builderpattern.part1.concretebuilder.BubbleMilkTeaBuilder
 import com.max.builderpattern.part1.concretebuilder.MilkTeaBuilder
@@ -39,6 +40,13 @@ class MainActivity: AppCompatActivity() {
     }
 
     private fun part2() {
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("title")
+            .setMessage("message")
+            .create()
+
+        dialog.show()
+
         val beverage2 = Beverage2.BeverageBuilder2()
             .setTea("blackTea")
             .setIsHasBubble(true)
@@ -49,6 +57,7 @@ class MainActivity: AppCompatActivity() {
     }
 
     private fun part3() {
+        // ex 要產生出 https://www.youtube.com/watch?v=bgQIzPnPI88
         val url = UrlBuilder()
             .setDomain("https://www.youtube.com/")
             .setRoute("watch")
